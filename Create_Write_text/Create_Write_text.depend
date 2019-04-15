@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1555302240 source:c:\users\lucky\onedrive\git hub\c---advanced\create_write_text\main.cpp
+	<iostream>
+	<fstream>
+

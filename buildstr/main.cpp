@@ -24,8 +24,9 @@ int main()
     strcpy(str, "\nMy Name is ");
     strcat(str, name);
     strcat(str, "I live at ");
-    strcat(str, addr;);
+    strcat(str, addr);
     strcat(str, ",\nand I work at ");
+    strcat(str, work);
     strcat(str, ".");
 
     cout << str << endl;

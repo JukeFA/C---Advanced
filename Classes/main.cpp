@@ -17,7 +17,7 @@ int main()
 
     // Box1 specificaton
     Box1.height = 5.0;
-    Box1.lenght = 6.0;
+    Box1.length = 6.0;
     Box1.breadth = 7.0;
 
     //Box2 specification
