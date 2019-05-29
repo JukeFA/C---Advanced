@@ -1,49 +1,46 @@
 #include <iostream>
 #include <cstring>
+#include <sstream>
+#include <stdio.h>
+
 
 using namespace std;
 
 int main()
 {
+    int p = 0;
+    int h = 0;
+    int m = 0;
+    int t = 0;
+
     char str[600];
     char hour[100];
     char pay[200];
     char tax[200];
     char paid[200];
 
-    int paid = 0;
-    int hour = 0;
-    int pay = 0;
-    int tax = 0;
-
-    // Get three strings from from the user.
-
     cout << "Enter hours worked and press ENTER: ";
     cin.getline(hour, 100);
-    cin >> hour;
+    stringstream(hour) >> h;
     cout << "Enter pay rate and press ENTER: ";
     cin.getline(pay, 200);
-    cin >> pay;
+    stringstream(pay) >> m;
     cout << "Enter tax rate and press ENTER: ";
     cin.getline(tax, 200);
-    cin >> tax;
-    
-    //multiply the pay rate
+    stringstream(tax) >> t;
 
-    int paid = int pay * int hour;
-
-    // Build the output string, and then print it.
+    p = (m * h);
 
     strcpy(str, "\nI worked ");
     strcat(str, hour);
-    strcat(str, "I get paid $");
+    strcat(str, " hours, I get paid $");
     strcat(str, pay);
-    strcat(str, ",\nper hour and the tax rate is $ ");
+    strcat(str, " per hour and the tax rate is $");
     strcat(str, tax);
-    strcat(str, ". ");
-    strcat(str, paid);
-    strcat(str, "\nwas deposited in my account.");
+    strcat(str, ".");
+
 
     cout << str << endl;
+    cout << "You got paid $" << p << " before tax." << endl;
     return 0;
 }
