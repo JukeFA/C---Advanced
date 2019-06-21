@@ -29,6 +29,7 @@ int main()
     strcat(str, work);
     strcat(str, ".");
 
+
     cout << str << endl;
     return 0;
 }
